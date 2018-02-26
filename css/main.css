@@ -36,7 +36,7 @@ nav>.navList li.navMask::after{content: '';display: block;position:absolute;top:
 /*myCardContainer - 个人信息*/
 section.myCard{position: relative;width: 940px;margin: -270px auto 0;background-color: #FFF;box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);cursor:default;}
 section.myCard>.myCard_information{padding: 50px;}
-section.myCard>.myCard_information>div{float: left;}
+section.myCard>.myCard_information>div{float: left;width: 300px;height: 350px;}
 section.myCard>.myCard_information>.resume{width: 470px;margin-left: 65px;height: 347px;}
 section.myCard>.myCard_information>.resume>.resumeTitle{background: #E6686A;color: #FFF;padding: 4px 16px;height: 30px;line-height: 30px;position: relative;}
 section.myCard>.myCard_information>.resume>.resumeTitle::after{content:'';border: 7px solid transparent;width: 0;border-left-color:#E6686A;border-top-width: 0;position: absolute;top: 100%;left: 10px;}
