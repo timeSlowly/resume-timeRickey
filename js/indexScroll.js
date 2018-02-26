@@ -16,7 +16,6 @@
 		},
 		navAutoChange: function() {
 			$(window).scroll(() => {
-				console.log(window.scrollY)
 				if(window.scrollY < 400) {
 					this.view.scrollStepOne.addClass('navMask').siblings().removeClass('navMask')
 				} else if(window.scrollY > 400 && window.scrollY < 900) {
