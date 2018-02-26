@@ -1,0 +1,90 @@
+/*GlobalControl - 全局控制*/
+* { margin: 0; padding: 0; }
+body,html{background-color: #EFEFEF;min-width: 1000px;}
+ul>li{list-style: none;float: left;}
+img{display: block;}
+a{color: inherit; text-decoration: none;}
+
+/*CommonCLass-公共属性*/
+.clearFix::after { content: ''; clear: both; display: block; }
+._test{box-sizing: border-box;border: 1px solid red;}
+
+/*LoadingContainer - 加载动画*/
+.loadingCover.active{display: flex;}
+.loadingCover{position: fixed;display:none;top:0;left:0;z-index:1000;width:100%;height: 100%;background: #888;justify-content: center;align-items: center;}
+.loadingCover .loading{width: 200px;height: 200px;position: relative;}
+.loadingCover .loading::before,
+.loadingCover .loading::after{ content: ''; position: absolute; width: 0; height: 0; background:black; border-radius: 50%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: _Loading 1.5s linear infinite; }
+.loadingCover .loading::before{animation-delay: .75s;}
+
+/*BannerContainer - 标题区域*/
+header { width: 100%; position: relative; }
+header>.banner{width: 100%;height: 515px;background: url(../img/index-banner.png) center center;background-size: cover;position: relative;}
+header>.banner>.bannerMask{position:absolute;width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);}
+
+/*NavigationContainer - 导航区域*/
+nav{width: 100%;height: 40px;position: fixed;top: 0;line-height: 40px;padding: 10px 0;user-select: none;z-index: 999;transition: all .5s;}
+nav.sticky{background: white;box-shadow: 0 0 25px rgba(0,0,0,.8);color: #3d4451;height: 25px;line-height: 25px;}
+nav>.navTitle{font-size: 24px;color: #E6686A;font-family: 'Arial Black';float: left;margin-left: 16px;}
+nav>.navTitle span{color: #9A9DA2;margin-left: 10px;}
+nav>.navList{float: right;margin-right: 16px;}
+nav>.navList li{font-size: 12px;font-weight: bold;color: #B7B7B7;margin: 0 17px;cursor: pointer;position: relative;}
+nav.sticky>.navList li{color: #000;}
+nav>.navList li:hover::after{content: '';display: block;position:absolute;top: 80%;left: 0;width: 100%;background: #e06567;height: 3px;animation: _navMask .25s linear;}
+nav>.navList li.navMask::after{content: '';display: block;position:absolute;top: 80%;left: 0;width: 100%;background: #e06567;height: 3px;animation: _navMask .25s linear;}
+
+/*myCardContainer - 个人信息*/
+section.myCard{position: relative;width: 940px;margin: -270px auto 0;background-color: #FFF;box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);cursor:default;}
+section.myCard>.myCard_information{padding: 50px;}
+section.myCard>.myCard_information>div{float: left;}
+section.myCard>.myCard_information>.resume{width: 470px;margin-left: 65px;height: 347px;}
+section.myCard>.myCard_information>.resume>.resumeTitle{background: #E6686A;color: #FFF;padding: 4px 16px;height: 30px;line-height: 30px;position: relative;}
+section.myCard>.myCard_information>.resume>.resumeTitle::after{content:'';border: 7px solid transparent;width: 0;border-left-color:#E6686A;border-top-width: 0;position: absolute;top: 100%;left: 10px;}
+section.myCard>.myCard_information>.resume>h1{margin-top: 18px;font-size: 2em;font-weight: normal;}
+section.myCard>.myCard_information>.resume>hr{margin: 20px 0;border-bottom: 0;border-top: 1px solid #DEDEDE;}
+section.myCard>.myCard_information>.resume>dl>*{float:left;padding: 5px 0;}
+section.myCard>.myCard_information>.resume>dl>dt{width:30%;font-weight: bold;}
+section.myCard>.myCard_information>.resume>dl>dd{width:70%;color: #9DA0A7;}
+section.myCard>.myCard_link{background: #E6686A; text-align: center;}
+section.myCard>.myCard_link a{display: inline-block; width: 40px; line-height: 30px; padding: 5px 0; border-radius: 50%; margin: 16px;}
+section.myCard>.myCard_link a:hover { background: #CF5D5F; } 
+section.myCard>.myCard_link a svg{width: 30px; height: 30px; fill: white; vertical-align: top;}
+
+/*dwonloadPDFContainer - 下载PDF*/
+section.dwonloadPDF{text-align: center;}
+section.dwonloadPDF a{font-size: 14px; line-height: 16px; padding: 12px 28px; border: 1px solid #cdcfd1; background: #EFEFEF; display: inline-block; border-radius: 5px; color: #3d4451; font-weight: bold; margin: 32px 0; transition: all 0.4s;}
+section.dwonloadPDF a:hover{box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);background: #FFF;}
+
+/*skillsContainer - 技能熟练*/
+section.skills{width: 940px;margin: 170px auto 0;transition: all .5s;}
+section.skills.active{margin-top: 35px;}
+section.skills>h1{text-align: center;font-size: 2em;color: #3D4451;cursor: default;}
+section.skills>ul{display: block;background: #FFF;margin: 20px auto;box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); padding: 42px 50px 8px;}
+section.skills>ul>li{float: left;width: 48%;text-align: left;margin: 0 1%;}
+section.skills>ul>li>h3{font-weight: normal;cursor: default;}
+section.skills>ul>li>h3>span{font-size: 12px;margin-left:15px;color: #FFF;font-family: 'Microsoft YaHei';transition: all 1s ease-in-out 1s;cursor: default;}
+section.skills>ul>li.active>h3>span{color: #E6686A;}
+section.skills>ul>li>.progressBar{height: 5px; background: #FAE1E1; margin: 4px 0 40px; overflow: hidden;}
+section.skills>ul>li>.progressBar>div{display: block; height: inherit;background-color: #E6686A; border-radius: 3px;transform: translateX(-100%);}
+section.skills>ul>li:nth-child(1)>.progressBar>div{width:85%;}/*html*/
+section.skills>ul>li:nth-child(2)>.progressBar>div{width:65%;}/*JS*/
+section.skills>ul>li:nth-child(3)>.progressBar>div{width:70%;}/*jQuery*/
+section.skills>ul>li:nth-child(4)>.progressBar>div{width:45%;}/*Vue*/
+section.skills>ul>li:nth-child(5)>.progressBar>div{width:35%;}/*Recat*/
+section.skills>ul>li:nth-child(6)>.progressBar>div{width:55%;}/*Node*/
+section.skills>ul>li.active>.progressBar>div{transform: translateX(0);transition: all 1s;}
+
+/*portfolioContainer - 作品集*/
+section.portfolio{width: 940px;margin: 190px auto 32px;transition: all .5s;}
+section.portfolio.active{margin-top: 75px}
+section.portfolio>h1{text-align: center;font-size: 2em;color: #3D4451;margin-bottom: 15px;cursor: default;}
+
+/*messageBoardContainer - 留言板*/
+section.messageBoard{width: 940px;margin: 190px auto 32px;transition: all .5s;}
+section.messageBoard.active{margin-top: 75px}
+section.messageBoard>h1{text-align: center;font-size: 2em;color: #3D4451;cursor: default;margin-bottom: 25px;}
+section.messageBoard>div{width: 100%;height: 400px;border: 1px solid red;}
+
+/*AnimationModel - 动画模块*/
+@keyframes _navMask{0%{width: 0;} 100%{width: 100%;}}
+@keyframes _Loading{ 0%{width: 0;height: 0;opacity: 1;} 100%{width: 55px;height: 55px;opacity: 0;} }

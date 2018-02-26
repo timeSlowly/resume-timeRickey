@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人简历-刘欢</title>
+		<!--本地CSS文件-->
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		
+		<!--CSS依赖-->
+		<link rel="stylesheet" type="text/css" href="lib/swiper-4.1.0.min.css"/>
+	</head>
+	<body>
+		<!--Loading Container-->
+		<div id="loadingCover" class="active loadingCover">
+			<div class="loading"></div>
+		</div>
+		<!--Banner Container-->
+		<header>
+			<div class="banner">
+				<div class="bannerMask"></div>
+			</div>
+		</header>
+		<!--Navigation Container-->
+		<nav class="clearFix">
+			<p class="navTitle">Time-Rickey<span>Resume</span></p>
+			<ul class="navList clearFix">
+				<li class="navMask">关于</li>
+				<li>技能</li>
+				<li>作品</li>
+				<li>留言板</li>
+			</ul>
+		</nav>
+		<!--MyCard Container-->
+		<section class="myCard">
+			<div class="myCard_information clearFix">
+				<div class="avatar"><img src="img/avatar.jpg"/></div>
+				<div class="resume">
+					<span class="resumeTitle">Hello</span>
+					<h1>刘欢</h1>
+					<p>前端开发工程师</p>
+					<hr />
+					<dl class="clearFix">
+						<dt>年龄</dt>
+						<dd>25</dd>
+						<dt>所在城市</dt>
+						<dd>北京</dd>
+						<dt>邮箱</dt>
+						<dd>time_slowlydown@icloud.com</dd>
+						<dt>手机</dt>
+						<dd>15901163179</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="myCard_link">
+				<a href="https://github.com/timeSlowly" target="_blank">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-github1"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-wechat"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-weibo"></use>
+					</svg>
+				</a>
+			</div>
+		</section>
+		<!--downloadPDF-->
+		<section class="dwonloadPDF"><a class="myCard_download" href="file/刘欢.pdf" target="_blank" download>下载PDF</a></section>
+		<!--skills Container-->
+		<section class="skills">
+			<h1>技能</h1>
+			<ul class="clearFix">
+				<li>
+					<h3>HTML & CSS3<span>精通</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+				<li>
+					<h3>JavaScript<span>熟练运用</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+				<li>
+					<h3>jQuery<span>熟练运用</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+				<li>
+					<h3>Vue.js<span>了解</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+				<li>
+					<h3>Recat.js<span>了解</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+				<li>
+					<h3>Node.js<span>会用</span></h3>
+					<div class="progressBar"><div></div></div>
+				</li>
+			</ul>
+		</section>
+		<section class="portfolio">
+			<h1>作品集</h1>
+			<div class="swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide"><img src="img/portfolio_myNavPage.png"/></li>
+					<li class="swiper-slide"><img src="img/portfolio_canvas.png"/></li>
+				</ul>
+				<div class="swiper-pagination"></div>
+				 <div class="swiper-button-prev"></div>
+    			<div class="swiper-button-next"></div>
+			</div>
+		</section>
+		
+		<section class="messageBoard">
+			<h1>留言板</h1>
+			<div class="messageBoard">
+				
+			</div>
+			
+		</section>
+			
+		<!--JS依赖-->
+		<script src="lib/jquery-3.3.1.min.js"></script>
+		<script src="lib/swiper-4.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/Tween.js"></script><!--缓动-->
+		<script src="//at.alicdn.com/t/font_506784_kr4rbgn96civn29.js" type="text/javascript" charset="utf-8"></script>
+		<script src="//cdn1.lncld.net/static/js/3.6.0/av-min.js"></script><!--LeanCloud存储服务-->
+		
+		
+		<!--私有JS-->
+		<script src="js/indexAnimations.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/indexScroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiperInit.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/messageBoard.js" type="text/javascript" charset="UTF-8"></script>
+	</body>
+</html>
