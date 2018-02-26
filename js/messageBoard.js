@@ -48,6 +48,7 @@
 			this.model.DBpush(name, content)
 				.then((obj)=>{
 					this.view.messageArea.find('ul').append(`<li>${obj.attributes.name}: ${obj.attributes.content}</li>`)
+					this.messageAreaInit()
 				})
 				.then(
 					()=>{},
